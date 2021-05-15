@@ -17,20 +17,20 @@ import UIKit
 // MARK: - Storyboard Segues
 
 // swiftlint:disable explicit_type_interface identifier_name line_length type_body_length type_name
-internal enum StoryboardSegue {
-  internal enum AdditionalImport: String, SegueType {
+enum StoryboardSegue {
+  enum AdditionalImport: String, SegueType {
     case afterDelay = "After Delay"
     case `open`
     case `private`
     case `public`
   }
-  internal enum Message: String, SegueType {
+  enum Message: String, SegueType {
     case customBack = "CustomBack"
     case embed = "Embed"
     case nonCustom = "NonCustom"
     case showNavCtrl = "Show-NavCtrl"
   }
-  internal enum Wizard: String, SegueType {
+  enum Wizard: String, SegueType {
     case showPassword = "ShowPassword"
   }
 }
@@ -38,16 +38,16 @@ internal enum StoryboardSegue {
 
 // MARK: - Implementation Details
 
-internal protocol SegueType: RawRepresentable {}
+protocol SegueType: RawRepresentable {}
 
-internal extension UIViewController {
+extension UIViewController {
   func perform<S: SegueType>(segue: S, sender: Any? = nil) where S.RawValue == String {
     let identifier = segue.rawValue
     performSegue(withIdentifier: identifier, sender: sender)
   }
 }
 
-internal extension SegueType where RawValue == String {
+extension SegueType where RawValue == String {
   init?(_ segue: UIStoryboardSegue) {
     guard let identifier = segue.identifier else { return nil }
     self.init(rawValue: identifier)

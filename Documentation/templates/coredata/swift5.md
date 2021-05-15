@@ -21,7 +21,7 @@ You can customize some elements of this template by overriding the following par
 | -------------- | ------------- | ----------- |
 | `extraImports`| N/A | With this you can provide additional modules to import, for example if you have properties with types from external modules. |
 | `generateObjcName`| N/A | If set, the generated types will have an `@objc(...)` annotation with their class name. |
-| `publicAccess` | N/A | If set, the generated types will be marked as `public`. Otherwise, they'll be declared `internal`. |
+| `publicAccess` | N/A | If set, the generated types will be marked as `public`.  |
 
 ## UserInfo Keys
 
@@ -37,26 +37,26 @@ This template also make use of UserInfo keys that you can set on your Data Model
 **Extract:**
 
 ```swift
-internal class MainEntity: NSManagedObject {
-  internal class var entityName: String {
+class MainEntity: NSManagedObject {
+  class var entityName: String {
     return "MainEntity"
   }
 
-  internal class func entity(in managedObjectContext: NSManagedObjectContext) -> NSEntityDescription? {
+  class func entity(in managedObjectContext: NSManagedObjectContext) -> NSEntityDescription? {
     return NSEntityDescription.entity(forEntityName: entityName, in: managedObjectContext)
   }
 
-  @nonobjc internal class func makeFetchRequest() -> NSFetchRequest<MainEntity> {
+  @nonobjc class func makeFetchRequest() -> NSFetchRequest<MainEntity> {
     return NSFetchRequest<MainEntity>(entityName: entityName)
   }
 
-  @NSManaged internal var attributedString: NSAttributedString?
-  @NSManaged internal var binaryData: Data?
-  @NSManaged internal var boolean: Bool
-  @NSManaged internal var date: Date?
-  @NSManaged internal var float: Float
-  @NSManaged internal var int64: Int64
-  internal var integerEnum: IntegerEnum {
+  @NSManaged var attributedString: NSAttributedString?
+  @NSManaged var binaryData: Data?
+  @NSManaged var boolean: Bool
+  @NSManaged var date: Date?
+  @NSManaged var float: Float
+  @NSManaged var int64: Int64
+  var integerEnum: IntegerEnum {
     get {
       let key = "integerEnum"
       willAccessValue(forKey: key)
@@ -76,7 +76,7 @@ internal class MainEntity: NSManagedObject {
       setPrimitiveValue(newValue.rawValue, forKey: key)
     }
   }
-  @NSManaged internal var manyToMany: Set<SecondaryEntity>
+  @NSManaged var manyToMany: Set<SecondaryEntity>
 }
 
 // MARK: Relationship ManyToMany

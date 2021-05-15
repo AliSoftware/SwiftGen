@@ -21,22 +21,22 @@ You can customize some elements of this template by overriding the following par
 | `enumName` | `JSONFiles` | Allows you to change the name of the generated `enum` containing all files. |
 | `forceFileNameEnum` | N/A | Setting this parameter will generate an `enum <FileName>` _even if_ only one FileName was provided as input. |
 | `preservePath` | N/A | Setting this parameter will disable the basename filter applied to all file paths. Use this if you added your data folder as a "folder reference" in your Xcode project, making that folder hierarchy preserved once copied in the build app bundle. The path will be relative to the folder you provided to SwiftGen. |
-| `publicAccess` | N/A | If set, the generated constants will be marked as `public`. Otherwise, they'll be declared `internal`. |
+| `publicAccess` | N/A | If set, the generated constants will be marked as `public`.  |
 
 ## Generated Code
 
 **Extract:**
 
 ```swift
-internal enum JSONFiles {
-  internal enum Array {
-    internal static let items: [String] = ["Anna", "Bob"]
+enum JSONFiles {
+  enum Array {
+    static let items: [String] = ["Anna", "Bob"]
   }
-  internal enum Configuration {
-    internal static let apiVersion: String = "2"
-    internal static let country: Any? = nil
-    internal static let environment: String = "staging"
-    internal static let options: [String: Any] = ["screen-order": ["1", "2", "3"]]
+  enum Configuration {
+    static let apiVersion: String = "2"
+    static let country: Any? = nil
+    static let environment: String = "staging"
+    static let options: [String: Any] = ["screen-order": ["1", "2", "3"]]
   }
 }
 ```

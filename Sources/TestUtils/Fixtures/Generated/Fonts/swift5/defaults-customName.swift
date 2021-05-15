@@ -9,7 +9,7 @@
 
 // Deprecated typealiases
 @available(*, deprecated, renamed: "MyFontConvertible.Font", message: "This typealias will be removed in SwiftGen 7.0")
-internal typealias MyFont = MyFontConvertible.Font
+typealias MyFont = MyFontConvertible.Font
 
 // swiftlint:disable superfluous_disable_command
 // swiftlint:disable file_length
@@ -17,45 +17,45 @@ internal typealias MyFont = MyFontConvertible.Font
 // MARK: - Fonts
 
 // swiftlint:disable identifier_name line_length type_body_length
-internal enum CustomFamily {
-  internal enum SFNSDisplay {
-    internal static let black = MyFontConvertible(name: ".SFNSDisplay-Black", family: ".SF NS Display", path: "SFNSDisplay-Black.otf")
-    internal static let bold = MyFontConvertible(name: ".SFNSDisplay-Bold", family: ".SF NS Display", path: "SFNSDisplay-Bold.otf")
-    internal static let heavy = MyFontConvertible(name: ".SFNSDisplay-Heavy", family: ".SF NS Display", path: "SFNSDisplay-Heavy.otf")
-    internal static let regular = MyFontConvertible(name: ".SFNSDisplay-Regular", family: ".SF NS Display", path: "SFNSDisplay-Regular.otf")
-    internal static let all: [MyFontConvertible] = [black, bold, heavy, regular]
+enum CustomFamily {
+  enum SFNSDisplay {
+    static let black = MyFontConvertible(name: ".SFNSDisplay-Black", family: ".SF NS Display", path: "SFNSDisplay-Black.otf")
+    static let bold = MyFontConvertible(name: ".SFNSDisplay-Bold", family: ".SF NS Display", path: "SFNSDisplay-Bold.otf")
+    static let heavy = MyFontConvertible(name: ".SFNSDisplay-Heavy", family: ".SF NS Display", path: "SFNSDisplay-Heavy.otf")
+    static let regular = MyFontConvertible(name: ".SFNSDisplay-Regular", family: ".SF NS Display", path: "SFNSDisplay-Regular.otf")
+    static let all: [MyFontConvertible] = [black, bold, heavy, regular]
   }
-  internal enum SFNSText {
-    internal static let bold = MyFontConvertible(name: ".SFNSText-Bold", family: ".SF NS Text", path: "SFNSText-Bold.otf")
-    internal static let heavy = MyFontConvertible(name: ".SFNSText-Heavy", family: ".SF NS Text", path: "SFNSText-Heavy.otf")
-    internal static let regular = MyFontConvertible(name: ".SFNSText-Regular", family: ".SF NS Text", path: "SFNSText-Regular.otf")
-    internal static let all: [MyFontConvertible] = [bold, heavy, regular]
+  enum SFNSText {
+    static let bold = MyFontConvertible(name: ".SFNSText-Bold", family: ".SF NS Text", path: "SFNSText-Bold.otf")
+    static let heavy = MyFontConvertible(name: ".SFNSText-Heavy", family: ".SF NS Text", path: "SFNSText-Heavy.otf")
+    static let regular = MyFontConvertible(name: ".SFNSText-Regular", family: ".SF NS Text", path: "SFNSText-Regular.otf")
+    static let all: [MyFontConvertible] = [bold, heavy, regular]
   }
-  internal enum Avenir {
-    internal static let black = MyFontConvertible(name: "Avenir-Black", family: "Avenir", path: "Avenir.ttc")
-    internal static let blackOblique = MyFontConvertible(name: "Avenir-BlackOblique", family: "Avenir", path: "Avenir.ttc")
-    internal static let book = MyFontConvertible(name: "Avenir-Book", family: "Avenir", path: "Avenir.ttc")
-    internal static let bookOblique = MyFontConvertible(name: "Avenir-BookOblique", family: "Avenir", path: "Avenir.ttc")
-    internal static let heavy = MyFontConvertible(name: "Avenir-Heavy", family: "Avenir", path: "Avenir.ttc")
-    internal static let heavyOblique = MyFontConvertible(name: "Avenir-HeavyOblique", family: "Avenir", path: "Avenir.ttc")
-    internal static let light = MyFontConvertible(name: "Avenir-Light", family: "Avenir", path: "Avenir.ttc")
-    internal static let lightOblique = MyFontConvertible(name: "Avenir-LightOblique", family: "Avenir", path: "Avenir.ttc")
-    internal static let medium = MyFontConvertible(name: "Avenir-Medium", family: "Avenir", path: "Avenir.ttc")
-    internal static let mediumOblique = MyFontConvertible(name: "Avenir-MediumOblique", family: "Avenir", path: "Avenir.ttc")
-    internal static let oblique = MyFontConvertible(name: "Avenir-Oblique", family: "Avenir", path: "Avenir.ttc")
-    internal static let roman = MyFontConvertible(name: "Avenir-Roman", family: "Avenir", path: "Avenir.ttc")
-    internal static let all: [MyFontConvertible] = [black, blackOblique, book, bookOblique, heavy, heavyOblique, light, lightOblique, medium, mediumOblique, oblique, roman]
+  enum Avenir {
+    static let black = MyFontConvertible(name: "Avenir-Black", family: "Avenir", path: "Avenir.ttc")
+    static let blackOblique = MyFontConvertible(name: "Avenir-BlackOblique", family: "Avenir", path: "Avenir.ttc")
+    static let book = MyFontConvertible(name: "Avenir-Book", family: "Avenir", path: "Avenir.ttc")
+    static let bookOblique = MyFontConvertible(name: "Avenir-BookOblique", family: "Avenir", path: "Avenir.ttc")
+    static let heavy = MyFontConvertible(name: "Avenir-Heavy", family: "Avenir", path: "Avenir.ttc")
+    static let heavyOblique = MyFontConvertible(name: "Avenir-HeavyOblique", family: "Avenir", path: "Avenir.ttc")
+    static let light = MyFontConvertible(name: "Avenir-Light", family: "Avenir", path: "Avenir.ttc")
+    static let lightOblique = MyFontConvertible(name: "Avenir-LightOblique", family: "Avenir", path: "Avenir.ttc")
+    static let medium = MyFontConvertible(name: "Avenir-Medium", family: "Avenir", path: "Avenir.ttc")
+    static let mediumOblique = MyFontConvertible(name: "Avenir-MediumOblique", family: "Avenir", path: "Avenir.ttc")
+    static let oblique = MyFontConvertible(name: "Avenir-Oblique", family: "Avenir", path: "Avenir.ttc")
+    static let roman = MyFontConvertible(name: "Avenir-Roman", family: "Avenir", path: "Avenir.ttc")
+    static let all: [MyFontConvertible] = [black, blackOblique, book, bookOblique, heavy, heavyOblique, light, lightOblique, medium, mediumOblique, oblique, roman]
   }
-  internal enum ZapfDingbats {
-    internal static let regular = MyFontConvertible(name: "ZapfDingbatsITC", family: "Zapf Dingbats", path: "ZapfDingbats.ttf")
-    internal static let all: [MyFontConvertible] = [regular]
+  enum ZapfDingbats {
+    static let regular = MyFontConvertible(name: "ZapfDingbatsITC", family: "Zapf Dingbats", path: "ZapfDingbats.ttf")
+    static let all: [MyFontConvertible] = [regular]
   }
-  internal enum Public {
-    internal static let `internal` = MyFontConvertible(name: "private", family: "public", path: "class.ttf")
-    internal static let all: [MyFontConvertible] = [`internal`]
+  enum Public {
+    static let `internal` = MyFontConvertible(name: "private", family: "public", path: "class.ttf")
+    static let all: [MyFontConvertible] = [`internal`]
   }
-  internal static let allCustomFonts: [MyFontConvertible] = [SFNSDisplay.all, SFNSText.all, Avenir.all, ZapfDingbats.all, Public.all].flatMap { $0 }
-  internal static func registerAllCustomFonts() {
+  static let allCustomFonts: [MyFontConvertible] = [SFNSDisplay.all, SFNSText.all, Avenir.all, ZapfDingbats.all, Public.all].flatMap { $0 }
+  static func registerAllCustomFonts() {
     allCustomFonts.forEach { $0.register() }
   }
 }
@@ -63,25 +63,25 @@ internal enum CustomFamily {
 
 // MARK: - Implementation Details
 
-internal struct MyFontConvertible {
-  internal let name: String
-  internal let family: String
-  internal let path: String
+struct MyFontConvertible {
+  let name: String
+  let family: String
+  let path: String
 
   #if os(macOS)
-  internal typealias Font = NSFont
+  typealias Font = NSFont
   #elseif os(iOS) || os(tvOS) || os(watchOS)
-  internal typealias Font = UIFont
+  typealias Font = UIFont
   #endif
 
-  internal func font(size: CGFloat) -> Font {
+  func font(size: CGFloat) -> Font {
     guard let font = Font(font: self, size: size) else {
       fatalError("Unable to initialize font '\(name)' (\(family))")
     }
     return font
   }
 
-  internal func register() {
+  func register() {
     // swiftlint:disable:next conditional_returns_on_newline
     guard let url = url else { return }
     CTFontManagerRegisterFontsForURL(url as CFURL, .process, nil)
@@ -93,7 +93,7 @@ internal struct MyFontConvertible {
   }
 }
 
-internal extension MyFontConvertible.Font {
+extension MyFontConvertible.Font {
   convenience init?(font: MyFontConvertible, size: CGFloat) {
     #if os(iOS) || os(tvOS) || os(watchOS)
     if !UIFont.fontNames(forFamilyName: font.family).contains(font.name) {

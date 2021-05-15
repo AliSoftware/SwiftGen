@@ -37,19 +37,19 @@ import UIKit
 // MARK: - Storyboard Scenes
 
 // swiftlint:disable explicit_type_interface identifier_name line_length type_body_length type_name
-internal enum StoryboardScene {
-  internal enum Wizard: StoryboardType {
-    internal static let storyboardName = "Wizard"
+enum StoryboardScene {
+  enum Wizard: StoryboardType {
+    static let storyboardName = "Wizard"
 
-    internal static let initialScene = InitialSceneType<SwiftGen.CreateAccViewController>(storyboard: Wizard.self)
+    static let initialScene = InitialSceneType<SwiftGen.CreateAccViewController>(storyboard: Wizard.self)
 
-    internal static let acceptToS = SceneType<UIKit.UIViewController>(storyboard: Wizard.self, identifier: "Accept-ToS")
+    static let acceptToS = SceneType<UIKit.UIViewController>(storyboard: Wizard.self, identifier: "Accept-ToS")
 
-    internal static let createAccount = SceneType<UIKit.UIViewController>(storyboard: Wizard.self, identifier: "CreateAccount")
+    static let createAccount = SceneType<UIKit.UIViewController>(storyboard: Wizard.self, identifier: "CreateAccount")
 
-    internal static let preferences = SceneType<UIKit.UITableViewController>(storyboard: Wizard.self, identifier: "Preferences")
+    static let preferences = SceneType<UIKit.UITableViewController>(storyboard: Wizard.self, identifier: "Preferences")
 
-    internal static let validatePassword = SceneType<UIKit.UIViewController>(storyboard: Wizard.self, identifier: "Validate_Password")
+    static let validatePassword = SceneType<UIKit.UIViewController>(storyboard: Wizard.self, identifier: "Validate_Password")
   }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name
@@ -59,14 +59,14 @@ internal enum StoryboardScene {
 // MARK: - Storyboard Segues
 
 // swiftlint:disable explicit_type_interface identifier_name line_length type_body_length type_name
-internal enum StoryboardSegue {
-  internal enum Message: String, SegueType {
+enum StoryboardSegue {
+  enum Message: String, SegueType {
     case customBack = "CustomBack"
     case embed = "Embed"
     case nonCustom = "NonCustom"
     case showNavCtrl = "Show-NavCtrl"
   }
-  internal enum Wizard: String, SegueType {
+  enum Wizard: String, SegueType {
     case showPassword = "ShowPassword"
   }
 }

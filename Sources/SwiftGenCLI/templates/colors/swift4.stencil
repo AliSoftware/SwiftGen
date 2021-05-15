@@ -3,7 +3,7 @@
 
 {% if palettes %}
 {% set colorAlias %}{{param.colorAliasName|default:"Color"}}{% endset %}
-{% set accessModifier %}{% if param.publicAccess %}public{% else %}internal{% endif %}{% endset %}
+{% set accessModifier %}{% if param.publicAccess %}public{% else %}{% endif %}{% endset %}
 #if os(macOS)
   import AppKit.NSColor
   {{accessModifier}} typealias {{colorAlias}} = NSColor
@@ -44,7 +44,7 @@
 
 // MARK: - Implementation Details
 
-internal extension {{colorAlias}} {
+extension {{colorAlias}} {
   convenience init(rgbaValue: UInt32) {
     let components = RGBAComponents(rgbaValue: rgbaValue).normalized
     self.init(red: components[0], green: components[1], blue: components[2], alpha: components[3])

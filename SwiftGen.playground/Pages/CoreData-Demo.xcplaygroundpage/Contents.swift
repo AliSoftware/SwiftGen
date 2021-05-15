@@ -29,31 +29,31 @@ public enum StringEnum: String {
 // MARK: - MainEntity
 
 @objc(MainEntity)
-internal class MainEntity: NSManagedObject {
-  internal class var entityName: String {
+class MainEntity: NSManagedObject {
+  class var entityName: String {
     return "MainEntity"
   }
 
-  internal class func entity(in managedObjectContext: NSManagedObjectContext) -> NSEntityDescription? {
+  class func entity(in managedObjectContext: NSManagedObjectContext) -> NSEntityDescription? {
     return NSEntityDescription.entity(forEntityName: entityName, in: managedObjectContext)
   }
 
-  @nonobjc internal class func makeFetchRequest() -> NSFetchRequest<MainEntity> {
+  @nonobjc class func makeFetchRequest() -> NSFetchRequest<MainEntity> {
     return NSFetchRequest<MainEntity>(entityName: entityName)
   }
 
   // swiftlint:disable implicitly_unwrapped_optional
-  @NSManaged internal var attributedString: NSAttributedString?
-  @NSManaged internal var binaryData: Data?
-  @NSManaged internal var boolean: Bool
-  @NSManaged internal var date: Date?
-  @NSManaged internal var decimal: NSDecimalNumber?
-  @NSManaged internal var double: Double
-  @NSManaged internal var float: Float
-  @NSManaged internal var int16: Int16
-  @NSManaged internal var int32: Int32
-  @NSManaged internal var int64: Int64
-  internal var integerEnum: IntegerEnum {
+  @NSManaged var attributedString: NSAttributedString?
+  @NSManaged var binaryData: Data?
+  @NSManaged var boolean: Bool
+  @NSManaged var date: Date?
+  @NSManaged var decimal: NSDecimalNumber?
+  @NSManaged var double: Double
+  @NSManaged var float: Float
+  @NSManaged var int16: Int16
+  @NSManaged var int32: Int32
+  @NSManaged var int64: Int64
+  var integerEnum: IntegerEnum {
     get {
       let key = "integerEnum"
       willAccessValue(forKey: key)
@@ -73,8 +73,8 @@ internal class MainEntity: NSManagedObject {
       setPrimitiveValue(newValue.rawValue, forKey: key)
     }
   }
-  @NSManaged internal var string: String
-  internal var stringEnum: StringEnum? {
+  @NSManaged var string: String
+  var stringEnum: StringEnum? {
     get {
       let key = "stringEnum"
       willAccessValue(forKey: key)
@@ -93,10 +93,10 @@ internal class MainEntity: NSManagedObject {
       setPrimitiveValue(newValue?.rawValue, forKey: key)
     }
   }
-  @NSManaged internal var transformable: AnyObject?
-  @NSManaged internal var transient: String?
-  @NSManaged internal var uri: URL?
-  @NSManaged internal var uuid: UUID?
+  @NSManaged var transformable: AnyObject?
+  @NSManaged var transient: String?
+  @NSManaged var uri: URL?
+  @NSManaged var uuid: UUID?
   // swiftlint:enable implicitly_unwrapped_optional
 }
 

@@ -23,7 +23,7 @@ You can customize some elements of this template by overriding the following par
 | `forceFileNameEnum` | N/A | Setting this parameter will generate an `enum <FileName>` _even if_ only one FileName was provided as input. |
 | `lookupFunction` | N/A¹ | Allows you to set your own custom localization function. The function needs to have as signature: `(key: String, table: String) -> String`. The parameters of your function can have any name (or even no external name), but if it has named parameters, you must provide the complete function signature, including those named parameters – e.g. `yourFunctionName(forKey:table:)`. Note: if you define this parameter, the `bundle` parameter will be ignored. |
 | `noComments` | N/A | Setting this parameter will disable the comments describing the translation of a key. |
-| `publicAccess` | N/A | If set, the generated constants will be marked as `public`. Otherwise, they'll be declared `internal`. |
+| `publicAccess` | N/A | If set, the generated constants will be marked as `public`.  |
 
 1. _If you don't provide a `lookupFunction`, we will use `localizedString(forKey:value:table:)` on the `bundle` parameter instead._
 
@@ -32,17 +32,17 @@ You can customize some elements of this template by overriding the following par
 **Extract:**
 
 ```swift
-internal enum L10n {
+enum L10n {
   /// Some alert body there
-  internal static let alertMessage = L10n.tr("Localizable", "alert__message")
+  static let alertMessage = L10n.tr("Localizable", "alert__message")
   /// Title of the alert
-  internal static let alertTitle = L10n.tr("Localizable", "alert__title")
+  static let alertTitle = L10n.tr("Localizable", "alert__title")
   /// You have %d apples
-  internal static func applesCount(_ p1: Int) -> String {
+  static func applesCount(_ p1: Int) -> String {
     return L10n.tr("Localizable", "apples.count", p1)
   }
   /// Those %d bananas belong to %@.
-  internal static func bananasOwner(_ p1: Int, _ p2: Any) -> String {
+  static func bananasOwner(_ p1: Int, _ p2: Any) -> String {
     return L10n.tr("Localizable", "bananas.owner", p1, String(describing: p2))
   }
 }

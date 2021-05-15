@@ -22,7 +22,7 @@ You can customize some elements of this template by overriding the following par
 | `fontTypeName` | `FontConvertible` | Allows you to change the name of the struct type representing a font. |
 | `lookupFunction` | N/A¹ | Allows you to set your own custom lookup function. The function needs to have as signature: `(name: String, family: String, path: String) -> URL?`. The parameters of your function can have any name (or even no external name), but if it has named parameters, you must provide the complete function signature, including those named parameters – e.g. `myFontFinder(name:family:path:)`. Note: if you define this parameter, the `bundle` parameter will be ignored. |
 | `preservePath` | N/A | Setting this parameter will disable the basename filter applied to all font paths. Use this if you added your font folder as a "folder reference" in your Xcode project, making that folder hierarchy preserved once copied in the build app bundle. The path will be relative to the folder you provided to SwiftGen. |
-| `publicAccess` | N/A | If set, the generated constants will be marked as `public`. Otherwise, they'll be declared `internal`. |
+| `publicAccess` | N/A | If set, the generated constants will be marked as `public`.  |
 | `fontAliasName` | `Font` | **Deprecated** Allows you to change the name of the `typealias` representing a font. Useful when working with SwiftUI, which defines it's own `Font` type. |
 
 1. _If you don't provide a `lookupFunction`, we will use `url(forResource:withExtension:)` on the `bundle` parameter instead._
@@ -32,15 +32,15 @@ You can customize some elements of this template by overriding the following par
 **Extract:**
 
 ```swift
-internal enum FontFamily {
-  internal enum SFNSDisplay {
-    internal static let black = FontConvertible(name: ".SFNSDisplay-Black", family: ".SF NS Display", path: "SFNSDisplay-Black.otf")
-    internal static let bold = FontConvertible(name: ".SFNSDisplay-Bold", family: ".SF NS Display", path: "SFNSDisplay-Bold.otf")
-    internal static let heavy = FontConvertible(name: ".SFNSDisplay-Heavy", family: ".SF NS Display", path: "SFNSDisplay-Heavy.otf")
-    internal static let regular = FontConvertible(name: ".SFNSDisplay-Regular", family: ".SF NS Display", path: "SFNSDisplay-Regular.otf")
+enum FontFamily {
+  enum SFNSDisplay {
+    static let black = FontConvertible(name: ".SFNSDisplay-Black", family: ".SF NS Display", path: "SFNSDisplay-Black.otf")
+    static let bold = FontConvertible(name: ".SFNSDisplay-Bold", family: ".SF NS Display", path: "SFNSDisplay-Bold.otf")
+    static let heavy = FontConvertible(name: ".SFNSDisplay-Heavy", family: ".SF NS Display", path: "SFNSDisplay-Heavy.otf")
+    static let regular = FontConvertible(name: ".SFNSDisplay-Regular", family: ".SF NS Display", path: "SFNSDisplay-Regular.otf")
   }
-  internal enum ZapfDingbats {
-    internal static let regular = FontConvertible(name: "ZapfDingbatsITC", family: "Zapf Dingbats", path: "ZapfDingbats.ttf")
+  enum ZapfDingbats {
+    static let regular = FontConvertible(name: "ZapfDingbatsITC", family: "Zapf Dingbats", path: "ZapfDingbats.ttf")
   }
 }
 ```

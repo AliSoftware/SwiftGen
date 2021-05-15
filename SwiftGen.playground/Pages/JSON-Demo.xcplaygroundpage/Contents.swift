@@ -35,15 +35,15 @@ import Foundation
 // MARK: - JSON Files
 
 // swiftlint:disable identifier_name line_length number_separator type_body_length
-internal enum JSONFilesInline {
-  internal enum Array {
-    internal static let items: [String] = ["Anna", "Bob"]
+enum JSONFilesInline {
+  enum Array {
+    static let items: [String] = ["Anna", "Bob"]
   }
-  internal enum Configuration {
-    internal static let apiVersion: String = "2"
-    internal static let country: Any? = nil
-    internal static let environment: String = "staging"
-    internal static let options: [String: Any] = ["screen-order": ["1", "2", "3"]]
+  enum Configuration {
+    static let apiVersion: String = "2"
+    static let country: Any? = nil
+    static let environment: String = "staging"
+    static let options: [String: Any] = ["screen-order": ["1", "2", "3"]]
   }
 }
 // swiftlint:enable identifier_name line_length number_separator type_body_length
@@ -56,16 +56,16 @@ internal enum JSONFilesInline {
 // MARK: - JSON Files
 
 // swiftlint:disable identifier_name line_length type_body_length
-internal enum JSONFilesRuntime {
-  internal enum Array {
-    internal static let items: [String] = objectFromJSON(at: "array.json")
+enum JSONFilesRuntime {
+  enum Array {
+    static let items: [String] = objectFromJSON(at: "array.json")
   }
-  internal enum Configuration {
+  enum Configuration {
     private static let _document = JSONDocument(path: "configuration.json")
-    internal static let apiVersion: String = _document["api-version"]
-    internal static let country: Any? = _document["country"]
-    internal static let environment: String = _document["environment"]
-    internal static let options: [String: Any] = _document["options"]
+    static let apiVersion: String = _document["api-version"]
+    static let country: Any? = _document["country"]
+    static let environment: String = _document["environment"]
+    static let options: [String: Any] = _document["options"]
   }
 }
 // swiftlint:enable identifier_name line_length type_body_length

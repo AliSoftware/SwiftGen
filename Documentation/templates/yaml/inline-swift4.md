@@ -22,30 +22,30 @@ You can customize some elements of this template by overriding the following par
 | `enumName` | `YAMLFiles` | Allows you to change the name of the generated `enum` containing all files. |
 | `forceFileNameEnum` | N/A | Setting this parameter will generate an `enum <FileName>` _even if_ only one FileName was provided as input. |
 | `preservePath` | N/A | Setting this parameter will disable the basename filter applied to all file paths. Use this if you added your data folder as a "folder reference" in your Xcode project, making that folder hierarchy preserved once copied in the build app bundle. The path will be relative to the folder you provided to SwiftGen. |
-| `publicAccess` | N/A | If set, the generated constants will be marked as `public`. Otherwise, they'll be declared `internal`. |
+| `publicAccess` | N/A | If set, the generated constants will be marked as `public`.  |
 
 ## Generated Code
 
 **Extract:**
 
 ```swift
-internal enum YAMLFiles {
-  internal enum Documents {
-    internal enum Document1 {
-      internal static let items: [String] = ["Mark McGwire", "Sammy Sosa", "Ken Griffey"]
+enum YAMLFiles {
+  enum Documents {
+    enum Document1 {
+      static let items: [String] = ["Mark McGwire", "Sammy Sosa", "Ken Griffey"]
     }
-    internal enum Document2 {
-      internal static let items: [String] = ["Chicago Cubs", "St Louis Cardinals"]
+    enum Document2 {
+      static let items: [String] = ["Chicago Cubs", "St Louis Cardinals"]
     }
   }
-  internal enum GroceryList {
-    internal static let items: [String] = ["Eggs", "Bread", "Milk"]
+  enum GroceryList {
+    static let items: [String] = ["Eggs", "Bread", "Milk"]
   }
-  internal enum Mapping {
-    internal static let car: Any? = nil
-    internal static let foo: [String: Any] = ["bar": "banana", "baz": "orange"]
-    internal static let hello: String = "world"
-    internal static let weight: Double = 33.3
+  enum Mapping {
+    static let car: Any? = nil
+    static let foo: [String: Any] = ["bar": "banana", "baz": "orange"]
+    static let hello: String = "world"
+    static let weight: Double = 33.3
   }
 }
 ```

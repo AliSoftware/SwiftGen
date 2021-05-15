@@ -9,34 +9,34 @@ import Foundation
 
 // swiftlint:disable explicit_type_interface identifier_name
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
-internal enum FileList {
+enum FileList {
   /// File
-  internal static let file = Resource(name: "File", ext: nil, relativePath: "", mimeType: "application/octet-stream")
+  static let file = Resource(name: "File", ext: nil, relativePath: "", mimeType: "application/octet-stream")
   /// test.txt
-  internal static let testTxt = Resource(name: "test", ext: "txt", relativePath: "", mimeType: "text/plain")
+  static let testTxt = Resource(name: "test", ext: "txt", relativePath: "", mimeType: "text/plain")
   /// another video.mp4
-  internal static let anotherVideoMp4 = Resource(name: "another video", ext: "mp4", relativePath: "", mimeType: "video/mp4")
+  static let anotherVideoMp4 = Resource(name: "another video", ext: "mp4", relativePath: "", mimeType: "video/mp4")
   /// A Video With Spaces.mp4
-  internal static let aVideoWithSpacesMp4 = Resource(name: "A Video With Spaces", ext: "mp4", relativePath: "", mimeType: "video/mp4")
+  static let aVideoWithSpacesMp4 = Resource(name: "A Video With Spaces", ext: "mp4", relativePath: "", mimeType: "video/mp4")
   /// graphic.svg
-  internal static let graphicSvg = Resource(name: "graphic", ext: "svg", relativePath: "", mimeType: "image/svg+xml")
+  static let graphicSvg = Resource(name: "graphic", ext: "svg", relativePath: "", mimeType: "image/svg+xml")
 }
 // swiftlint:enable explicit_type_interface identifier_name
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
 
 // MARK: - Implementation Details
 
-internal struct Resource {
-  internal let name: String
-  internal let ext: String?
-  internal let relativePath: String
-  internal let mimeType: String
+struct Resource {
+  let name: String
+  let ext: String?
+  let relativePath: String
+  let mimeType: String
 
-  internal var url: URL {
+  var url: URL {
     return url(locale: nil)
   }
 
-  internal func url(locale: Locale?) -> URL {
+  func url(locale: Locale?) -> URL {
     let bundle = BundleToken.bundle
     let url = bundle.url(
       forResource: name,
@@ -51,11 +51,11 @@ internal struct Resource {
     return result
   }
 
-  internal var path: String {
+  var path: String {
     return path(locale: nil)
   }
 
-  internal func path(locale: Locale?) -> String {
+  func path(locale: Locale?) -> String {
     return url(locale: locale).path
   }
 }
