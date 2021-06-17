@@ -25,7 +25,7 @@ _None_
   [David Jennes](https://github.com/djbe)
   [#562](https://github.com/SwiftGen/SwiftGen/issues/562)
   [#797](https://github.com/SwiftGen/SwiftGen/pull/797)
-* Adding support for a log parameter when running the command, replacing the old verbose parameter and allowing silent log level.
+* Adding support for a log parameter when running the command, replacing the old verbose parameter and allowing silent log level.  
   [Andre113](https://github.com/Andre113)
   [#562](https://github.com/SwiftGen/SwiftGen/issues/823)
   [#797](https://github.com/SwiftGen/SwiftGen/pull/846)
