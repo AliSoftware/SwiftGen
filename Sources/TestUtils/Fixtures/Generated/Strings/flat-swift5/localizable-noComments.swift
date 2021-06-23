@@ -38,6 +38,7 @@ internal enum L10n {
   internal static let settingsNavigationBarTitleEvenDeeper = L10n.tr("Localizable", "settings.navigation-bar.title.even.deeper")
   internal static let settingsUserProfileSectionFooterText = L10n.tr("Localizable", "settings.user__profile_section.footer_text")
   internal static let settingsUserProfileSectionHEADERTITLE = L10n.tr("Localizable", "settings.user__profile_section.HEADER_TITLE")
+  internal static let whatHappensHere = L10n.tr("Localizable", "what./*happens*/.here")
 }
 // swiftlint:enable function_parameter_count identifier_name line_length type_body_length
 

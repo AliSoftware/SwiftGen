@@ -10,7 +10,8 @@ tables:
         - "Int"
     - name: "bananas"
       strings:
-      - key: "bananas.owner"
+      - comment: "A comment with no space above it"
+        key: "bananas.owner"
         name: "owner"
         translation: "Those %d bananas belong to %@."
         types:
@@ -95,11 +96,20 @@ tables:
           name: "HEADER_TITLE"
           translation: "User Profile Settings"
       name: "settings"
+    - children:
+      - name: "/*happens*/"
+        strings:
+        - comment: "some comment"
+          key: "what./*happens*/.here"
+          name: "here"
+          translation: "hello world! /* still in string */"
+      name: "what"
     strings:
     - key: "alert__message"
       name: "alert__message"
       translation: "Some alert body there"
-    - key: "alert__title"
+    - comment: "Title for an alert"
+      key: "alert__title"
       name: "alert__title"
       translation: "Title of the alert"
     - key: "ObjectOwnership"

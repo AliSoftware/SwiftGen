@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString*)settingsNavigationBarTitleEvenDeeper;
 + (NSString*)settingsUserProfileSectionFooterText;
 + (NSString*)settingsUserProfileSectionHEADERTITLE;
++ (NSString*)whatHappensHere;
 @end
 
 

@@ -78,6 +78,9 @@ static NSString* tr(NSString *tableName, NSString *key, ...) {
 + (NSString*)settingsUserProfileSectionHEADERTITLE {
     return tr(@"Localizable", @"settings.user__profile_section.HEADER_TITLE");
 }
++ (NSString*)whatHappensHere {
+    return tr(@"Localizable", @"what./*happens*/.here");
+}
 @end
 
 @implementation LocMultiline : NSObject
@@ -86,6 +89,9 @@ static NSString* tr(NSString *tableName, NSString *key, ...) {
 }
 + (NSString*)multiLineNKey {
     return tr(@"LocMultiline", @"multiLine\nKey");
+}
++ (NSString*)multilineComment {
+    return tr(@"LocMultiline", @"multiline-comment");
 }
 + (NSString*)multiline2 {
     return tr(@"LocMultiline", @"MULTILINE2");

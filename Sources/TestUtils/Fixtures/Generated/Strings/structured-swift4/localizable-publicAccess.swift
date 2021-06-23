@@ -12,7 +12,7 @@ import Foundation
 public enum L10n {
   /// Some alert body there
   public static let alertMessage = L10n.tr("Localizable", "alert__message")
-  /// Title of the alert
+  /// Title for an alert
   public static let alertTitle = L10n.tr("Localizable", "alert__title")
   /// These are %3$@'s %1$d %2$@.
   public static func objectOwnership(_ p1: Int, _ p2: Any, _ p3: Any) -> String {
@@ -37,7 +37,7 @@ public enum L10n {
   }
 
   public enum Bananas {
-    /// Those %d bananas belong to %@.
+    /// A comment with no space above it
     public static func owner(_ p1: Int, _ p2: Any) -> String {
       return L10n.tr("Localizable", "bananas.owner", p1, String(describing: p2))
     }
@@ -92,6 +92,13 @@ public enum L10n {
       public static let footerText = L10n.tr("Localizable", "settings.user__profile_section.footer_text")
       /// User Profile Settings
       public static let headerTitle = L10n.tr("Localizable", "settings.user__profile_section.HEADER_TITLE")
+    }
+  }
+
+  public enum What {
+    public enum Happens {
+      /// some comment
+      public static let here = L10n.tr("Localizable", "what./*happens*/.here")
     }
   }
 }

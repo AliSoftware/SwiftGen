@@ -7,7 +7,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Localizable : NSObject
 /// Some alert body there
 + (NSString*)alertMessage;
-/// Title of the alert
+/// Title for an alert
 + (NSString*)alertTitle;
 /// These are %3$@'s %1$d %2$@.
 + (NSString*)objectOwnershipWithValues:(NSInteger)p1 :(id)p2 :(id)p3;
@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString*)typesWithValues:(id)p1 :(char)p2 :(NSInteger)p3 :(float)p4 :(char*)p5 :(void*)p6;
 /// Plural format key: "%#@apples@"
 + (NSString*)applesCountWithValue:(NSInteger)p1;
-/// Those %d bananas belong to %@.
+/// A comment with no space above it
 + (NSString*)bananasOwnerWithValues:(NSInteger)p1 :(id)p2;
 /// Plural format key: "%#@Matches@"
 + (NSString*)competitionEventNumberOfMatchesWithValue:(NSInteger)p1;
@@ -39,6 +39,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString*)settingsUserProfileSectionFooterText;
 /// User Profile Settings
 + (NSString*)settingsUserProfileSectionHEADERTITLE;
+/// some comment
++ (NSString*)whatHappensHere;
 @end
 
 

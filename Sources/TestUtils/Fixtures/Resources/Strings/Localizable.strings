@@ -1,10 +1,15 @@
+/* Title for an alert */
 "alert__title" = "Title of the alert";
 "alert__message" = "Some alert body there";
 
 "percent" = "This is a %% character.";
 "private" = "Hello, my name is %@ and I'm %d";
 
+/* some comment */
+"what./*happens*/.here" = "hello world! /* still in string */";
+
 "apples.count" = "You have %d apples";
+/* A comment with no space above it */
 "bananas.owner" = "Those %d bananas belong to %@.";
 "types" = "Object: '%@', Character: '%c', Integer: '%d', Float: '%f', CString: '%s', Pointer: '%p'";
 
@@ -12,6 +17,7 @@
 
 "settings.navigation-bar.self" = "Some Reserved Keyword there";
 "settings.navigation-bar.title.even.deeper" = "Settings";
+"what./*happens*/.here" = "hello world! /* still in string */";
 "settings.user__profile_section.HEADER_TITLE" = "User Profile Settings";
 "settings.user__profile_section.footer_text" = "Here you can change some user profile settings.";
 

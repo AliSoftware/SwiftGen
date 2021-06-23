@@ -12,7 +12,7 @@ import Foundation
 internal enum XCTLoc {
   /// Some alert body there
   internal static let alertMessage = XCTLoc.tr("Localizable", "alert__message")
-  /// Title of the alert
+  /// Title for an alert
   internal static let alertTitle = XCTLoc.tr("Localizable", "alert__title")
   /// These are %3$@'s %1$d %2$@.
   internal static func objectOwnership(_ p1: Int, _ p2: Any, _ p3: Any) -> String {
@@ -37,7 +37,7 @@ internal enum XCTLoc {
   }
 
   internal enum Bananas {
-    /// Those %d bananas belong to %@.
+    /// A comment with no space above it
     internal static func owner(_ p1: Int, _ p2: Any) -> String {
       return XCTLoc.tr("Localizable", "bananas.owner", p1, String(describing: p2))
     }
@@ -92,6 +92,13 @@ internal enum XCTLoc {
       internal static let footerText = XCTLoc.tr("Localizable", "settings.user__profile_section.footer_text")
       /// User Profile Settings
       internal static let headerTitle = XCTLoc.tr("Localizable", "settings.user__profile_section.HEADER_TITLE")
+    }
+  }
+
+  internal enum What {
+    internal enum Happens {
+      /// some comment
+      internal static let here = XCTLoc.tr("Localizable", "what./*happens*/.here")
     }
   }
 }

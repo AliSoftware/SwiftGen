@@ -25,6 +25,9 @@ _None_
   [David Jennes](https://github.com/djbe)
   [#562](https://github.com/SwiftGen/SwiftGen/issues/562)
   [#797](https://github.com/SwiftGen/SwiftGen/pull/797)
+* Strings: added support for `.strings` files comments. The built-in templates will now use them for comments instead of the translation of a key.
+  [@CraigSiemens](https://github.com/CraigSiemens)
+  [#563](https://github.com/SwiftGen/SwiftGen/issues/563)
 
 ### Bug Fixes
 
